@@ -6,7 +6,7 @@ const anime = document.querySelector('.anime');
 const character = document.querySelector('.character');
 const lifeLine = document.querySelector('#lives');
 const question = document.querySelector('.question');
-const score = document.querySelector('#score');
+const score = document.querySelector('#real-score');
 const url = 'https://animechan.vercel.app/api/random'
 let guess = ""
 let correctAnswer = ""
@@ -83,6 +83,7 @@ function playerGuess(){
 
     } else{
         checkAnswer(guess, correctAnswer)
+        getQuote()
     }
         
 }
@@ -99,7 +100,10 @@ function checkAnswer(guess, answer){
             scoreCard--
         }
         
-        lifeCard--
+        if(lifeCard > 0){
+            lifeCard--
+
+        }
         
     }
 
