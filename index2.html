@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anime Quizz App</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <h1>Anime Quiz App<sup id="version">V0</sup></h1>
+    <h6 class="animation-1">Test Your Anime Knowledge</h6>
+  </header>
+  <main>
+    <div class="life-line-score">
+
+      <div id="score">
+        <p>Score:0</p>
+
+      </div>
+      <div id="life-line">
+        <p>Life Line: <span id="lives">5</span> </p>
+
+      </div>
+    </div>
+    <div class="main">
+      
+
+      <div class="question">
+
+      </div>
+      <input type="text" placeholder="Input Anime Name" class="anime">
+      <input type="text" placeholder="Input Character" class="character">
+    </div>
+    <div style="display: flex; justify-content: center; gap: 5px;">
+        <div class="btn">
+            <button>Answer</button>
+          </div>
+          <div class="btn" id="next-question">
+              <button>Next question</button>
+            </div>
+    </div>
+    
+  </main>
+  <footer></footer>
+
+
+<script src="animeQuiz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+
+ 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+  
+header {
+  border-bottom: 3px dotted #19191B;
+  box-shadow: 0 0 15px black;
+  width: 100vw;
+  text-align: center;
+  margin-top: 0;
+}
+
+.btn{
+  text-align: center
+}
+
+.btn button{
+  padding: 15px 60px;
+  font-weight: bold;
+}
+
+@media(max-width: 768px) {
+  .animation-1 {
+    animation: move 5s infinite;
+    transition: ease;
+    text-align: center;
+    width: 150px;
+  }
+
+  #version {
+    animation: blink 5s infinite;
+    transition: ease;
+
+  }
+
+  @keyframes move {
+    0% {
+      transform: translateX(0)
+    }
+
+    33.3% {
+      transform: translateX(350px);
+      background-color: rgba(211, 26, 142, 1);
+    }
+
+    67% {
+      transform: translateX(100px);
+      background-color: rgba(138, 211, 26, 1);
+    }
+
+    100% {
+      transform: translateX(-200px);
+      background-color: rgba(103, 134, 58, 0.53);
+    }
+  }
+
+  @keyframes blink {
+    33.3% {
+      background-color: rgba(211, 26, 142, 1);
+
+    }
+
+
+    67% {
+      background-color: rgba(138, 211, 26, 1)
+    }
+
+    100% {
+      background-color: rgba(103, 134, 58, 0.53);
+    }
+  }
+
+
+
+.question {
+  border: 2px inset black;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 7.5px;
+  grid-area: question;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "question question question question"
+    "anime anime anime anime"
+    "character character character character";
+  margin: 30px 0 0 0;
+
+}
+
+
+
+#score {
+  float: right;
+  color: white;
+  background-color: green;
+  padding: 15px;
+}
+
+#life-line{
+  color:red;
+  background-color: black;
+  padding: 15px;
+  width:110px;
+}
+
+.anime {
+  grid-area: anime;
+}
+
+.character {
+  grid-area: character;
+}
+
+.life-line-score {
+  margin: 10px 2.5px;
+}
+  
+.main input{
+  margin:10px;
+  padding: 30px;
+  text-align: center
+}
+}
